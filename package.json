@@ -1,0 +1,29 @@
+{
+  "name": "maratonanode---rocktseat",
+  "version": "1.0.0",
+  "description": "Projeto Node",
+  "main": "src/serve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-masson/maratonaNode-rocktseat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel-masson/maratonaNode-rocktseat/issues"
+  },
+  "homepage": "https://github.com/gabriel-masson/maratonaNode-rocktseat#readme",
+  "dependencies": {
+    "ejs": "^3.1.6"
+    
+    
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

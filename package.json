@@ -4,8 +4,8 @@
   "description": "Projeto Node",
   "main": "src/serve.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "init-db": "node src/db/init.js"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,10 @@
   },
   "homepage": "https://github.com/gabriel-masson/maratonaNode-rocktseat#readme",
   "dependencies": {
-    "ejs": "^3.1.6"
-    
-    
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"

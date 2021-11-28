@@ -3,9 +3,11 @@ const JobUtils = require('../utils/JobsUtils');
 const Profile = require("../model/Profile");
 
 module.exports = {
-    index(req, res) {
-        const jobs = Job.get();
-        const profile = Profile.get();
+    async index(req, res) {
+        const jobs = await Job.get();
+        
+        //pondo async ppor causa do profile
+        const profile = await Profile.get();
 
         let statusCount = {
             progress: 0,
@@ -18,6 +20,7 @@ module.exports = {
         //vamos calcular quantos dias falta para o fim do projeto
         const updatedJobs = jobs.map((job) => {
             const remaining = JobUtils.remainingDay(job);
+            
             const status = remaining <= 0 ? "done" : "progress";
             //vamos acessar a propriedade do objeto de acordo com o status
             //pois estara sendo verificado no ciclo do map
